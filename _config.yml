@@ -1,16 +1,23 @@
-name: Jekyll Themes
-url: http://matt.harzewski.com
-description: Insert tagline here
+title: the Simplex theme
+logo_img: /assets/img/icons/golasblog_logo.svg
+favicon: /assets/favicon.ico
+description: description
+global_tags: jekyll theme simplex golasblog responsive html5
+copyright: © Golasowski 2021
 
-permalink: /themes/:title/
+sass:
+    style: compressed
 
-plugins: [jekyll-paginate]
+collections:
+    category:
+        output: true
+    authors:
+        output: false
 
-highlighter: pygments
-paginate: 20
-
-markdown: rdiscount
-rdiscount:
-    extensions: ['smart']
-
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
