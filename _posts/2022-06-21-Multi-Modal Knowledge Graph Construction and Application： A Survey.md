@@ -7,7 +7,9 @@ categories:
 tags:
 - 多模态
 - 知识图谱
----
-# Multi-Modal Knowledge Graph Construction and Application:A Survey
 
-## 
+description: 多模态知识图谱综述
+---
+
+# Introduction
+目前，多模态知识图谱是一个比较新的领域。
