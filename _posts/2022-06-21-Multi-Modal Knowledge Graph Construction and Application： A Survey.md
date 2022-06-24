@@ -40,10 +40,33 @@ description: 多模态知识图谱综述
 
 ## 2.Construction
 
-多模态图谱构建的本质是构建传统KG中符号化的知识(包括实体、概念和关系)与它们相对应的图像之间的联系。从这个角度出发，图谱构建的方式的出发点就有两个，一个是图像，一个是传统的符号。
+    多模态图谱构建的本质是构建传统KG中符号化的知识(包括实体、概念和关系)与它们相对应的图像之间的联系。从这个角度出发，图谱构建的方式的出发点就有两个，一个是图像，一个是传统的符号。
+
 ### 从图像到符号-图像打标(Labeling Image)
-    
-    我们从已有的图像当中抽取出KG中的符号表示。
+
+    从已有的图像当中抽取出KG中的符号表示。根据需要链接的符号，可以分成一下主要任务：
+    *主要任务*
+    - 1. Visual Entity/Concept Extraction 
+    - 2. Visual Relation Extraction
+    - 3. Visual Event Extraction
+
+
+
 
 ### 从符号到图像-符号落地(Symbol Grounding)
 
+- 1. Entity Grounding
+- 2. Concept Grounding
+- 3. Relation Grounding
+
+
+    Entity Grounding 主要是为实体找到相关的图片。它的难点在于怎么找和怎么匹配。通常的方案是爬取百科类的数据或者利用搜索引擎进行搜索。主要工作都是在做一些数据清洗类的 
+    Concept Grounding 主要为概念找到具有代表性的，多样化的，有区分性质的图片。不同于实体，面对概念时，第一，有的概念时不可视的。这里文章举了个例子，叫irreligionist（非宗教主义者）
+    第二，概念通常时实体的抽象，那么表示概念的图片就会很多，怎么筛选最具代表性的概念就是个问题。例如：Princess（女王）、Physicist（物理学家）。这里 Visualization Concept Judgment是用来探索判别可视化概念， 
+    Representative Image Selection 用来筛选具有代表意义的图片 ，Image Diversification用来保证图片能兼具代表性和多样性。
+    Relation Grounding 主要是寻找能够表示特定关系的图像，给定包含该关系的一个或者多个三元组，能够找到表示该关系的代表性图像。由于关系表示依赖于实体，利用三元组俩检索图像，
+    通常就需要利用Text-Image Matching 
+    技术，Graph Matching技术。
+
+
+##### 关键技术
