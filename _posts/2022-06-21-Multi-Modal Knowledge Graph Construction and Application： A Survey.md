@@ -46,24 +46,24 @@ $$\mathcal{T_{\mathcal{R}}}= (\mathcal{E_{\mathcal{KG}}}\cup \mathcal{E_{\mathca
 
 从已有的图像当中抽取出KG中的符号表示。根据需要链接的符号，可以分成一下主要任务：
 *主要任务*
-- 1. Visual Entity/Concept Extraction 
-- 2. Visual Relation Extraction
-- 3. Visual Event Extraction
+1. Visual Entity/Concept Extraction 
+2. Visual Relation Extraction
+3. Visual Event Extraction
 
 
 
 ### 从符号到图像-符号落地(Symbol Grounding)
 
-- 1. Entity Grounding
+1. Entity Grounding
 
 Entity Grounding 主要是为实体找到相关的图片。它的难点在于怎么找和怎么匹配。通常的方案是爬取百科类的数据或者利用搜索引擎进行搜索。主要工作都是在做一些数据清洗类
 
-- 2. Concept Grounding
+2. Concept Grounding
 
 Concept Grounding 主要为概念找到具有代表性的，多样化的，有区分性质的图片。不同于实体，面对概念时，第一，有的概念时不可视的。这里文章举了个例子，叫irreligionist（非宗教主义者）
 第二，概念通常时实体的抽象，那么表示概念的图片就会很多，怎么筛选最具代表性的概念就是个问题。例如：Princess（女王）、Physicist（物理学家）。这里 Visualization Concept Judgment是用来探索判别可视化概念， Representative Image Selection 用来筛选具有代表意义的图片 ，Image Diversification用来保证图片能兼具代表性和多样性。
 
-- 3. Relation Grounding
+3. Relation Grounding
 
 Relation Grounding 主要是寻找能够表示特定关系的图像，给定包含该关系的一个或者多个三元组，能够找到表示该关系的代表性图像。由于关系表示依赖于实体，利用三元组俩检索图像，通常就需要利用Text-Image Matching 技术，Graph Matching技术。
 
