@@ -20,13 +20,13 @@ description: 多模态知识图谱综述
 
 
 - 1.A-MMKG<br>
-    将多模态数据当作实体和概念的特定属性数据，图谱可表示为 $$\mathcal{G} =\{ \mathcal{E},\mathcal{R},\mathcal{A},\mathcal{V},\mathcal{T_{\mathcal{R}}}, \mathcal{T_{\mathcal{A}}} \} $$,其中
-    $$\mathcal{T_{\mathcal{A}}}= \mathcal{E}\times\mathcal{A}\times (\mathcal{V_{\mathcal{KG}}}\cup \mathcal{V_{\mathcal{MM}}})$$
+将多模态数据当作实体和概念的特定属性数据，图谱可表示为 $$\mathcal{G} =\{ \mathcal{E},\mathcal{R},\mathcal{A},\mathcal{V},\mathcal{T_{\mathcal{R}}}, \mathcal{T_{\mathcal{A}}} \} $$,其中
+$$\mathcal{T_{\mathcal{A}}}= \mathcal{E}\times\mathcal{A}\times (\mathcal{V_{\mathcal{KG}}}\cup \mathcal{V_{\mathcal{MM}}})$$
 
 
 - 2.N-MMKG<br>
-    将多模态数据表示为图谱中的实体，图谱可表示为 $$\mathcal{G} =\{ \mathcal{E},\mathcal{R},\mathcal{A},\mathcal{V},\mathcal{T_{\mathcal{R}}}, \mathcal{T_{\mathcal{A}}} \} $$,其中
-    $$\mathcal{T_{\mathcal{R}}}= (\mathcal{E_{\mathcal{KG}}}\cup \mathcal{E_{\mathcal{MM}}})\times\mathcal{R}\times (\mathcal{E_{\mathcal{KG}}}\cup \mathcal{E_{\mathcal{MM}}})$$,显然该表示方案会扩充多模态知识图谱中的光系类型
+将多模态数据表示为图谱中的实体，图谱可表示为 $$\mathcal{G} =\{ \mathcal{E},\mathcal{R},\mathcal{A},\mathcal{V},\mathcal{T_{\mathcal{R}}}, \mathcal{T_{\mathcal{A}}} \} $$,其中
+$$\mathcal{T_{\mathcal{R}}}= (\mathcal{E_{\mathcal{KG}}}\cup \mathcal{E_{\mathcal{MM}}})\times\mathcal{R}\times (\mathcal{E_{\mathcal{KG}}}\cup \mathcal{E_{\mathcal{MM}}})$$,显然该表示方案会扩充多模态知识图谱中的光系类型
 
 *注*：理解属性和关系的区别
 关系刻画的是实体与实体之间的联系，属性刻画的是实体本身固有特性
@@ -40,16 +40,15 @@ description: 多模态知识图谱综述
 
 ## 2.Construction
 
-    多模态图谱构建的本质是构建传统KG中符号化的知识(包括实体、概念和关系)与它们相对应的图像之间的联系。从这个角度出发，图谱构建的方式的出发点就有两个，一个是图像，一个是传统的符号。
+多模态图谱构建的本质是构建传统KG中符号化的知识(包括实体、概念和关系)与它们相对应的图像之间的联系。从这个角度出发，图谱构建的方式的出发点就有两个，一个是图像，一个是传统的符号。
 
 ### 从图像到符号-图像打标(Labeling Image)
 
-    从已有的图像当中抽取出KG中的符号表示。根据需要链接的符号，可以分成一下主要任务：
-    *主要任务*
-    - 1. Visual Entity/Concept Extraction 
-    - 2. Visual Relation Extraction
-    - 3. Visual Event Extraction
-
+从已有的图像当中抽取出KG中的符号表示。根据需要链接的符号，可以分成一下主要任务：
+*主要任务*
+- 1. Visual Entity/Concept Extraction 
+- 2. Visual Relation Extraction
+- 3. Visual Event Extraction
 
 
 
