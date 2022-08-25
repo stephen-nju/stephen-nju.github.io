@@ -14,7 +14,6 @@ description: 视频理解相关知识学习
 
 # Introduction
 
-
 视频理解是一个很复杂的任务, 主要围绕对语义方面的识别, 其中包括场景和环境, 实体对象, 动作, 事件, 属性和概念等, 通常视频理解也可称为semantic video understanding.涉及到具体的任务, 
 视频理解又可以大致分为以下几个方面：
 - 1.) video classification, 主要是对视频中的动作进行分类 
