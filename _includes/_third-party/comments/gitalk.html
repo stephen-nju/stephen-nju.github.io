@@ -18,7 +18,9 @@
         id: '{{ page.url }}',
         labels: ['gitalk'],
         perPage: 50,
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        proxy: "https://cors-server-ecru.vercel.app/github_access_token"
+
       });
       gitalk.render('gitalk-container');
 </script>
