@@ -14,7 +14,7 @@ description: 视频理解相关知识学习
 
 # Introduction
 ----------------------------------------------------------
-&emsp;视频理解是一个很复杂的任务, 主要围绕对语义方面的识别, 其中包括场景和环境, 实体对象, 动作, 事件, 属性和概念等, 通常视频理解也可称为semantic video understanding.
+视频理解是一个很复杂的任务, 主要围绕对语义方面的识别, 其中包括场景和环境, 实体对象, 动作, 事件, 属性和概念等, 通常视频理解也可称为semantic video understanding.
 涉及到具体的任务, 视频理解又可以大致分为以下几个方面：
 - 1.) video classification, 主要是对视频中的动作进行分类 
 - 2.)Temporal Action Dection 识别出视频动作中的起始帧和结束帧 
@@ -23,9 +23,9 @@ description: 视频理解相关知识学习
 
 ## Optical Flow
 --------------------------------------------------------------
-&emsp;Optical flow or optic flow is the pattern of apparent motion of objects,  surfaces,  and edges in a visual scene caused by the relative motion between an observer and a scene.Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.(wiki)
-光流主要是由于观察者和物体之间的相对运动, 引起视觉场景中的物体, 表面, 边缘表观运动的模式.光流可以用来描述物体的运动.
-光流技术的主要应用方向在运动估计(motion estimation)和视频压缩(vide compress).在视频领域, 光流常常用在物体检测和跟踪(object detection and tracking), 运动检测(movement detection), 图像主平面抽取(image dominant plane extraction)等.
+>&emsp;Optical flow or optic flow is the pattern of apparent motion of objects,  surfaces,  and edges in a visual scene caused by the relative motion between an observer and a scene.Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.(wiki)
+
+&emsp;光流主要是由于观察者和物体之间的相对运动, 引起视觉场景中的物体, 表面, 边缘表观运动的模式.光流可以用来描述物体的运动.光流技术的主要应用方向在运动估计(motion estimation)和视频压缩(vide compress).在视频领域, 光流常常用在物体检测和跟踪(object detection and tracking), 运动检测(movement detection), 图像主平面抽取(image dominant plane extraction)等.
 
 # Paper Reading
 --------------------------------------------------------------
