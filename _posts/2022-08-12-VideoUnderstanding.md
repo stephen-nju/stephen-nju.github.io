@@ -2,7 +2,7 @@
 title: Video Understanding-视频理解
 date: 2022-08-12
 categories:
-- Reading notes
+- ReadingNotes
 - Video
 
 tags:
