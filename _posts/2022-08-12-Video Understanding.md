@@ -15,7 +15,7 @@ description: 视频理解相关知识学习
 
 # Introduction
 ----------------------------------------------------------
-&emsp 视频理解是一个很复杂的任务, 主要围绕对语义方面的识别, 其中包括场景和环境, 实体对象, 动作, 事件, 属性和概念等, 通常视频理解也可称为semantic video understanding.
+&emsp;视频理解是一个很复杂的任务, 主要围绕对语义方面的识别, 其中包括场景和环境, 实体对象, 动作, 事件, 属性和概念等, 通常视频理解也可称为semantic video understanding.
 涉及到具体的任务, 视频理解又可以大致分为以下几个方面：
 - 1.) video classification, 主要是对视频中的动作进行分类 
 - 2.)Temporal Action Dection 识别出视频动作中的起始帧和结束帧 
@@ -25,7 +25,7 @@ description: 视频理解相关知识学习
 ## Optical Flow
 --------------------------------------------------------------
 
-&emsp Optical flow or optic flow is the pattern of apparent motion of objects,  surfaces,  and edges in a visual scene caused by the relative motion between an observer and a scene.Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.(wiki)
+&emsp;Optical flow or optic flow is the pattern of apparent motion of objects,  surfaces,  and edges in a visual scene caused by the relative motion between an observer and a scene.Optical flow can also be defined as the distribution of apparent velocities of movement of brightness pattern in an image.(wiki)
 光流主要是由于观察者和物体之间的相对运动, 引起视觉场景中的物体, 表面, 边缘表观运动的模式.光流可以用来描述物体的运动.
 光流技术的主要应用方向在运动估计(motion estimation)和视频压缩(vide compress).在视频领域, 光流常常用在物体检测和跟踪(object detection and tracking), 运动检测(movement detection), 图像主平面抽取(image dominant plane extraction)等.
 
@@ -104,3 +104,16 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 利用在imagenet上预训练好的模型, 将模型从2D架构改造为3D架构, 将2D的卷积算子和池化算子扩充为3为, 由 $$N\times N$$ 膨胀为 $$N\times N\times N$$, 那么怎么改造已经做好预训练的模型权重呢？它这里面先将2D的卷积核在时间维度上复制N份, 然后再除以N, 再时间维度上归一化, 保证预训练模型数据分布的一致性. 第二步设置时间维度, 空间维度的步长, 池化窗口等超参. 这里简单说明一下为什么需要调整这些参数, 通常的二维卷积对图像的两个维度（垂直方向和水平方向）是平等对待的, 所以池化的核和步长都是相同的. 现在加入了时间维度, 就应该需要考虑到图像的帧率和图像的分辨率. 如果相对空间而言, 时间增长过快, 会破会混合不同对象的边缘特征, 破坏了早期的特征检测, 如果过慢, 又可能不能很好的获取动态场景. 
 
 ### Is Space-Time Attention All You Need for Video Understanding(2019)
+&emsp;这是一篇将visual transformer应用到视频理解领域的初步尝试。这是一篇实验性文章，作者探索了五种自注意力结构，并提出了一种全新的自注意力机制(divided space-time attention), 该机制在视频分类效果上取得了最优的表现。
+&emsp;这里先说下transformer的优势和迁移到视频领域的主要问题![参考文章](https://arxiv.org/pdf/2102.05095.pdf):
+- 1.卷积网络的归纳偏见（局部连接性和平移不变性），在小数据集上的效果是毫无疑问的，但是在面对足够的训练集会限制模型的表达能力。具体可参考
+- 2.卷积核的设计是用来捕获短距离的时空信息，无法建模感受野之外的依赖。通过深度堆叠卷积层，确实能够扩大感受野，但是这种通过聚集短距离信息的方式，仍然有固有的限制。
+- 3. 训练深层的CNN非常耗费资源。
+
+&emsp;下面说一下作者对自注意力机制的探索，主要包含五种结构，如下图：
+
+<figure>
+<a><img src="{{site.url}}/pictures/vd_img_6.png"></a>
+</figure>
+
+

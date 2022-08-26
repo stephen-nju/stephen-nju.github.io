@@ -215,7 +215,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/stephen-nju
-  Zhihu: https://www.zhihu.com/people/zhu-bin-44
+  ZhiHu: https://www.zhihu.com/people/zhu-bin-44
 
 # Social Links Icons
 # Icon Mapping:
@@ -229,7 +229,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-  Zhihu: zhihu
+  ZhiHu: zhihu
 
 
 # Sidebar Avatar
