@@ -439,7 +439,7 @@ gitalk:
   enable: true
   clientID: e13bcbb4ab94087d620e
   clientSecret: 0df35ae2d22792eff14d2ea1d60ea58dc0e19bf5
-  repo: stephen-nju.github.io
+  repo: gittalk
   owner: stephen-nju
   admin: stephen-nju
 
