@@ -3,7 +3,7 @@ title: Swin Transformer:Hierarchical Vision Transformer using Shifted Windows
 date: 2022-08-26
 categories:
 - ReadingNotes
-- Visual Transformers
+- VisualTransformers
 
 tags:
 - Swin Transformer
