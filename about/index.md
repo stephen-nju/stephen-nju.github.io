@@ -1,6 +1,13 @@
 ---
+
 layout: page
 type: about
 ---
 
-This is coming so....
+
+## Who am I
+
+## About This Site
+
+
+## Contact Me

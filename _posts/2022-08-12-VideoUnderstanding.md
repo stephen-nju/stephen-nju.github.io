@@ -2,11 +2,11 @@
 title: Video Understanding-视频理解
 date: 2022-08-12
 categories:
-- ReadingNotes
 - Video
+- PaperReading
 
 tags:
-- video understanding
+- Video Understanding
 
 description: 视频理解相关知识学习
 ---
@@ -34,7 +34,7 @@ description: 视频理解相关知识学习
 ### Two-Stream Convolutional Networks for Action Recognition in Videos(2014)
 --------------------------------------------------------------
 
-双流网络的模型结构如下：
+&emsp;这篇文章算是视频理解的开山之作，双流网络的模型结构如下：
 <figure>
 <a><img src="{{site.url}}/pictures/vd_img.png"></a>
 </figure>
@@ -154,3 +154,9 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 
 - 1.K400数据集上2D注意力的效果较好，主要原因：K400是一个比较偏重静态图像的视频，放到SSv2效果下降很多
 - 2.joint space time注意力机制的参数较小，但是模型占用显存的大小与输入视频帧数和视频裁剪的像素的大小呈现一种指数增长的关系，无法训练较长的视频和分辨率较高的视频
+
+
+### Video Swin Transformer(2021)
+---------------------------------------------------------------
+
+&emsp;swin transformer在图像领域取得了非常好的效果，再各种下游的视觉任务中都达到了sota，很好的验证了transformer结构在图像领域的有效性。在介绍video swin transformer之前，我们先介绍下swin transformer
