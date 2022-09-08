@@ -56,7 +56,19 @@ description: swin transformer
 &emsp;如图，先将RGB图片切割成没有重叠的patch，每个patch看成一个token，每个token的特征是原始RGB像素点的值的拼接。
 假设原始图片大小 $$H \times W\times 3 $$ ，patch size的大小为 $$4\times 4$$，经过patch partion过后，图片特征变为$$\frac{H}{4}\times\frac{W}{4} \times(4*4*3)$$。
 （以$$224\times 224\times 3$$的图片为例，经过patch partition过后，再将patch平展开，输入特征的shape其实就是$$3136\times 48$$）。
-后面接上一个线性映射层，将每个patch的维度映射为$$C$$（这里类似NLP中的token embedding），后面利用swin transformer block计算注意力，完成第一阶段的计算。为了能够提出多尺度的特征，在后面的三个阶段，我们通过patch mergeing来减少token的数量，通过transformer block提取特征。
+后面接上一个线性映射层，将每个patch的维度映射为$$C$$（这里类似NLP中的token embedding），后面利用swin transformer block计算注意力，完成第一阶段的计算。为了能够提出多尺度的特征，在后面的三个阶段，我们通过patch mergeing来减少token的数量，通过transformer block来计算特征。
 现在剩下的问题就是
+
 - 1.patch merging 的具体操作流程
+
+>在每个stage开始，使用patch merging降采样，缩小分辨率，改变通道数目，具体策略是采样 $$2\times 2$$邻域内的特征
+
 - 2.transformer block是怎么计算的
+>如上图（b）， 每个transformer block分为两个部分，一个部分是W-MSA(window based multi-head self-attention),另一部分是 SW-MSA(shift window based multi-head self-attention)，两个模块依次连接。为提高计算效率，作者采用了cyclic shif的方式，具体可以参考下图。
+
+<center>
+<figure>
+<img src="{{site.url}}/pictures/swin_tran_1.png">
+</figure>
+</center>
+

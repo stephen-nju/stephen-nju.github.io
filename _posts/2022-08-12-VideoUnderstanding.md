@@ -2,12 +2,12 @@
 title: Video Understanding-视频理解
 date: 2022-08-12
 categories:
-- Video
+- VideoUnderstanding
 - PaperReading
 
 tags:
 - Video Understanding
-
+- Visual Transformer
 description: 视频理解相关知识学习
 ---
 相关文献可具体参考：[Video Action Understanding: A Tutorial](https://arxiv.org/pdf/2010.06647v1.pdf)
