@@ -64,11 +64,12 @@ description: swin transformer
 >在每个stage开始，使用patch merging降采样，缩小分辨率，改变通道数目，具体策略是采样 $$2\times 2$$邻域内的特征
 
 - 2.transformer block是怎么计算的
->如上图（b）， 每个transformer block分为两个部分，一个部分是W-MSA(window based multi-head self-attention),另一部分是 SW-MSA(shift window based multi-head self-attention)，两个模块依次连接。为提高计算效率，作者采用了cyclic shif的方式，具体可以参考下图。
+
+>如上图（b）， 每个transformer block分为两个部分，一个部分是W-MSA(window based multi-head self-attention),另一部分是 SW-MSA(shift window based multi-head self-attention)，两个模块依次连接。这里面的要点就两个，一个是设置注意力计算的窗口，计算局部特征。第二个使用shift windows 捕获全局特征。其中为提高计算效率，作者采用了cyclic shif的方式，具体可以参考下图。
 
 <center>
 <figure>
-<img src="{{site.url}}/pictures/swin_tran_1.png">
+<img src="{{site.url}}/pictures/swin_tran_3.png">
 </figure>
 </center>
 
