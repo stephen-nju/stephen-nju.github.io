@@ -1,6 +1,6 @@
 ---
 title: Swin Transformer:Hierarchical Vision Transformer using Shifted Windows
-date: 2022-08-26
+date: 2022-09-07
 categories:
 - ReadingNotes
 - VisualTransformers
