@@ -159,7 +159,7 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 #### Video Swin Transformer(2021)
 ---------------------------------------------------------------
 
-&emsp;swin transformer在图像领域取得了非常好的效果，再各种下游的视觉任务中都达到了sota，很好的验证了transformer结构在图像领域的有效性。在介绍video swin transformer之前，可以先了解下[swin transformer](https://stephen-nju.github.io/readingnotes/visualtransformers/2022/09/07/swin_transformer/).video swin transformer是swin transformer从二维图片到三维视频的自然延申，熟悉swin transformer的很好理解。它强调局部的归纳偏置(inductive bias of locality)，能够很好的在训练速度和准确率之间做到很好的平衡。
+&emsp;swin transformer在图像领域取得了非常好的效果，再各种下游的视觉任务中都达到了sota，很好的验证了transformer结构在图像领域的有效性。在介绍video swin transformer之前，可以先了解下[swin transformer](https://stephen-nju.github.io/readingnotes/visualtransformers/2022/09/07/swin_transformer/)。video swin transformer是swin transformer从二维图片到三维视频的自然延申，熟悉swin transformer的很好理解。它强调局部的归纳偏置(inductive bias of locality)，能够很好的在训练速度和准确率之间做到很好的平衡。
 
 模型的基本结构如下：
 <center>
@@ -169,5 +169,6 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 </center>
 
 最后我们看下相关结论：
+
 - 在目前公开的动作识别类数据集上(Kinetics-400, Kinetics-600 and Something-Something v2)都达到了目前最好的水平。
 - 该模型从swin transformer改变而来，能够利用强大的图像预训练模型来增强video swin transformer的能力。（效果明显，本人实测能够）
