@@ -171,4 +171,4 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 最后我们看下相关结论：
 
 - 在目前公开的动作识别类数据集上(Kinetics-400, Kinetics-600 and Something-Something v2)都达到了目前最好的水平。
-- 该模型从swin transformer改变而来，能够利用强大的图像预训练模型来增强video swin transformer的能力。（效果明显，本人实测能够）
+- 该模型从swin transformer改变而来，能够利用强大的图像预训练模型来增强video swin transformer的能力。（效果明显，本人实测）
