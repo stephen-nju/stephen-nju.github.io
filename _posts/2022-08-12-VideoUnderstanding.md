@@ -31,7 +31,7 @@ description: 视频理解相关知识学习
 # Paper Reading
 --------------------------------------------------------------
 
-### Two-Stream Convolutional Networks for Action Recognition in Videos(2014)
+#### Two-Stream Convolutional Networks for Action Recognition in Videos(2014)
 --------------------------------------------------------------
 
 &emsp;这篇文章算是视频理解的开山之作，双流网络的模型结构如下：
@@ -63,7 +63,7 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 早期关于3维卷积网络的研究, 双流网络最致命的缺点就是慢, 抽取光流的算法是非常耗费时间的. 
 
 
-### Learning Spatiotemporal Features with 3D Convolutional Networks(C3D 2015)
+#### Learning Spatiotemporal Features with 3D Convolutional Networks(C3D 2015)
 --------------------------------------------------------------
 
 
@@ -87,7 +87,7 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 
 
 
-### Quo Vadis,  Action Recognition? A New Model and the Kinetics Dataset
+#### Quo Vadis,  Action Recognition? A New Model and the Kinetics Dataset
 --------------------------------------------------------------
 
 
@@ -115,7 +115,7 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
     >利用在imagenet上预训练好的模型, 将模型从2D架构改造为3D架构, 将2D的卷积算子和池化算子扩充为3为, 由 $$N\times N$$ 膨胀为 $$N\times N\times N$$, 那么怎么改造已经做好预训练的模型权重呢？它这里面先将2D的卷积核在时间维度上复制N份, 然后再除以N, 再时间维度上归一化, 保证预训练模型数据分布的一致性. 第二步设置时间维度, 空间维度的步长, 池化窗口等超参. 这里简单说明一下为什么需要调整这些参数, 通常的二维卷积对图像的两个维度（垂直方向和水平方向）是平等对待的, 所以池化的核和步长都是相同的. 现在加入了时间维度, 就应该需要考虑到图像的帧率和图像的分辨率. 如果相对空间而言, 时间增长过快, 会破会混合不同对象的边缘特征, 破坏了早期的特征检测, 如果过慢, 又可能不能很好的获取动态场景. 
 
 
-### Is Space-Time Attention All You Need for Video Understanding(2019)
+#### Is Space-Time Attention All You Need for Video Understanding(2019)
 --------------------------------------------------------------
 
 &emsp;这是一篇将visual transformer应用到视频理解领域的初步尝试。这是一篇实验性文章，作者探索了五种自注意力结构，并提出了一种全新的自注意力机制(divided space-time attention), 该机制在视频分类效果上取得了最优的表现。
@@ -156,7 +156,7 @@ trajectory stacking 利用光流对像素点进行追踪, 先追踪每个像素�
 - 2.joint space time注意力机制的参数较小，但是模型占用显存的大小与输入视频帧数和视频裁剪的像素的大小呈现一种指数增长的关系，无法训练较长的视频和分辨率较高的视频
 
 
-### Video Swin Transformer(2021)
+#### Video Swin Transformer(2021)
 ---------------------------------------------------------------
 
 &emsp;swin transformer在图像领域取得了非常好的效果，再各种下游的视觉任务中都达到了sota，很好的验证了transformer结构在图像领域的有效性。在介绍video swin transformer之前，可以先了解下[swin transformer](https://stephen-nju.github.io/readingnotes/visualtransformers/2022/09/07/swin_transformer/).video swin transformer是swin transformer从二维图片到三维视频的自然延申，熟悉swin transformer的很好理解。它强调局部的归纳偏置(inductive bias of locality)，能够很好的在训练速度和准确率之间做到很好的平衡。
