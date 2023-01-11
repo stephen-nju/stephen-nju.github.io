@@ -5,12 +5,14 @@ categories:
 - ProgrammingTool
 tags:
 - UTF编码
-description: 理解Unicode编码的各种概念，文章参考 https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
+description: 理解Unicode编码的各种概念
 ---
 
+[参考文章](https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 
 # Introduction 
 --------------------------------------------------
+
 ## ASCII码
 --------------------------------------------------
 
