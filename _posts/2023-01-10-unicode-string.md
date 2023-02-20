@@ -1,3 +1,12 @@
+<!--
+ * @Author: zhubin
+ * @Date: 2023-01-10 14:40:02
+ * @FilePath: \stephen-nju.github.io\_posts\2023-01-10-unicode-string.md
+ * @Description: utf8 编码
+ * 
+ * Copyright (c) 2023 by ${git_name}, All Rights Reserved. 
+-->
+
 ---
 title: 理解UTF编码
 date: 2023-01-10
@@ -6,6 +15,7 @@ categories:
 tags:
 - UTF编码
 description: 理解Unicode编码的各种概念
+
 ---
 
 [参考文章](https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
@@ -35,3 +45,17 @@ ASCII码使用指定的7 位或8 位二进制数组合来表示128 或256 种可
 
 &emsp;Unicode 是国际标准字符集，它将世界各种语言的每个字符定义一个唯一的编码，以满足跨语言、跨平台的文本信息转换。Unicode 字符集的编码范围是`0x0000 - 0x10FFFF`， 可以容纳一百多万个字符。例如：大写字母A的码点是 0x41, 具体字符对应的 Unicode 编码可以查询[Unicode字符编码表](https://home.unicode.org/)
 
+
+### UTF-8编码
+
+&emsp;utf8编码是一种变长编码方式，它使用1到4个字节编码全部Unicode码点。具有较小值的码点（通常该字符的出现频率较高）使用较短的字节进行编码。utf8编码能够向后兼容ASCII编码，所以有效的ASCII编码的文本也一定是有效的utf8编码的文本。
+
+#### Encoding
+
+&emsp;utf8使用1到4个字节来编码*码点*的值。对于码点小于128的字符，可以用一个字节（8位）来表示（首位字节设置位0，剩余7位刚好可以表示128个字符）。对于码点值大于128的，由于编码该码点需要多个字节，那么第一个字节的头部有几个1就表示该字符需要多少个字节，剩下的每个字节的开头以`10`开头，具体可以对照下图：
+
+<figure>
+<a><img src="{{site.url}}/pictures/utf8_1.png"></a>
+</figure>
+
+注：这里需要注意下，对于部分复杂的符号，比如emoji表情，它所需的字节可能会大于4个，这是因为它们可以由不同的码点组成。
