@@ -1,18 +1,17 @@
 ---
-layout: post
 title: Lazygit 使用指南
 date: 2026-05-29
-categories: [Tools]
-tags: [git, terminal, productivity]
+categories:
+- Tools
+tags:
+- git
+- terminal
+- productivity
+
+description: Lazygit 是一个终端下的 TUI 工具，为 Git 操作提供交互式界面，大幅提升日常 Git 工作流的效率。
 ---
 
-# Lazygit 使用指南
-
-Lazygit 是一个终端下的 TUI 工具，为 Git 操作提供交互式界面，大幅提升日常 Git 工作流的效率。
-
 <!-- more -->
-
-## 核心概念
 
 Lazygit 将工作分为多个面板（Pane），每个面板专注一种操作对象：
 
